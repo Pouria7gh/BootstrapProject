@@ -480,3 +480,91 @@ body > div:nth-of-type(13) > div > div:first-child a {
 body > div:nth-of-type(14) {
     background-color: #fff8f8;
 }
+/* start up animation */
+.su-mask {
+    background-color: #dad3d3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: su-mask;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+.su-aut {
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    bottom: 70px;
+    right: 204px;
+    color: #007bff;
+    animation-name: su-aut;
+    animation-duration: 2s;
+}
+p.su-aut::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #dad3d3;
+    content: "";
+    animation-name: su-aut-after;
+    animation-duration: 2s;
+    transform-origin: left;
+    animation-fill-mode: forwards;
+}
+.su-body {
+    height: 100vh;
+    overflow: hidden;
+}
+@keyframes su-aut {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes su-aut-after {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+.su-text {
+    color: #007bff;
+    position: relative;
+    bottom: 30px;
+    left: 34px;
+    animation-name: su-text;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes su-text {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes su-mask {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

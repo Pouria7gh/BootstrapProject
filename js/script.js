@@ -17,6 +17,29 @@ $(document).ready(() => {
         }
     });
 });
+
+//startUp animation
+
+$(function(){
+    $("html, body").animate({scrollTop: 0}, 1);
+    $("body").addClass("su-body");
+
+    let mask = $("<div></div>").css({top: `-${$("nav").innerHeight()}px`}).addClass("su-mask");
+
+    let aut = $("<p></p>").text("AUT").addClass("su-aut");
+
+    let text = $("<p></p>").text("Get the highest education with us").addClass("su-text");
+    
+    mask.append(text);
+    mask.append(aut);
+    $("body").append(mask);
+
+    setTimeout(function(){
+        mask.remove();
+        $("body").removeClass("su-body");
+    }, 5000);
+});
+
 // row 4
 
 let hlPointer = 0;
