@@ -424,10 +424,10 @@ body > div:nth-of-type(11) .card-header a:hover {
     color: #444;
     text-decoration: none;
 }
-body > div:nth-of-type(11) .card-header a:focus {
+#myAcc a.active { /* a */
     color: #007bff;
 }
-body > div:nth-of-type(11) .card-header a:focus i {
+#myAcc a.active i { /* i */
     transform: rotate(180deg);
 }
 body > div:nth-of-type(11) .card-body {

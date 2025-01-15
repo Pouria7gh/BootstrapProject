@@ -22,7 +22,9 @@ $(document).ready(() => {
 
 $(function(){
     $("html, body").animate({scrollTop: 0}, 1);
-    $("body").addClass("su-body");
+    setTimeout(function(){
+        $("body").addClass("su-body");
+    }, 10);
 
     let mask = $("<div></div>").css({top: `-${$("nav").innerHeight()}px`}).addClass("su-mask");
 
@@ -232,4 +234,24 @@ $(function(){
         $("#aboutLink").removeClass("active");
     }
    });
+});
+
+// FAQ row
+
+$(function(){
+    $("#myAcc .card-header a").click(function(){
+        
+        let a = true;
+        for(let i = 0; i < this.classList.length; i++) {
+            if(this.classList[i] == 'active') {
+                a = false;
+                break;
+            }
+        }
+
+        $("#myAcc .card-header a").removeClass("active");
+
+        
+        $(this).toggleClass("active", a);
+    });
 });
