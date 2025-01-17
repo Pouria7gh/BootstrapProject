@@ -21,11 +21,6 @@ $(document).ready(() => {
 //startUp animation
 
 $(function(){
-    $("html, body").animate({scrollTop: 0}, 1);
-    setTimeout(function(){
-        $("body").addClass("su-body");
-    }, 10);
-
     let mask = $("<div></div>").css({top: `-${$("nav").innerHeight()}px`}).addClass("su-mask");
 
     let aut = $("<p></p>").text("AUT").addClass("su-aut");

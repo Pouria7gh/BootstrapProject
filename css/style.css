@@ -12,9 +12,12 @@ nav {
     z-index: 1000;
     background-color: #fff;
 }
+nav button {
+    top: 10px;
+    right: 0;
+}
 body {
     position: relative;
-    scroll-behavior: smooth !important;
 }
 /* row 1 */
 body > div:first-of-type {
@@ -483,11 +486,10 @@ body > div:nth-of-type(14) {
 /* start up animation */
 .su-mask {
     background-color: #dad3d3;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-top: 65px;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -520,10 +522,6 @@ p.su-aut::after {
     animation-duration: 2s;
     transform-origin: left;
     animation-fill-mode: forwards;
-}
-.su-body {
-    height: 100vh;
-    overflow: hidden;
 }
 @keyframes su-aut {
     from {
