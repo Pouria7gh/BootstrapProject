@@ -250,3 +250,27 @@ $(function(){
         $(this).toggleClass("active", a);
     });
 });
+
+// portfolio row filter buttons
+
+$(function() {
+    $("#port-link-all").click(function() {
+        $(this).addClass("active");
+        $("#port-link-card, #port-link-app").removeClass("active");
+        $("#portfolio .port-app, #portfolio .port-card").show();
+    });
+
+    $("#port-link-app").click(function() {
+        $(this).addClass("active");
+        $("#port-link-card, #port-link-all").removeClass("active");
+        $("#portfolio .port-app").show();
+        $("#portfolio .port-card").hide();
+    });
+
+    $("#port-link-card").click(function() {
+        $(this).addClass("active");
+        $("#port-link-app, #port-link-all").removeClass("active");
+        $("#portfolio .port-app").hide();
+        $("#portfolio .port-card").show();
+    });
+});
