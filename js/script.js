@@ -21,20 +21,20 @@ $(document).ready(() => {
 //startUp animation
 
 $(function(){
-    let mask = $("<div></div>").css({top: `-${$("nav").innerHeight()}px`}).addClass("su-mask");
+    // let mask = $("<div></div>").css({top: `-${$("nav").innerHeight()}px`}).addClass("su-mask");
 
-    let aut = $("<p></p>").text("AUT").addClass("su-aut");
+    // let aut = $("<p></p>").text("AUT").addClass("su-aut");
 
-    let text = $("<p></p>").text("Get the highest education with us").addClass("su-text");
+    // let text = $("<p></p>").text("Get the highest education with us").addClass("su-text");
     
-    mask.append(text);
-    mask.append(aut);
-    $("body").append(mask);
+    // mask.append(text);
+    // mask.append(aut);
+    // $("body").append(mask);
 
-    setTimeout(function(){
-        mask.remove();
-        $("body").removeClass("su-body");
-    }, 5000);
+    // setTimeout(function(){
+    //     mask.remove();
+    //     $("body").removeClass("su-body");
+    // }, 5000);
 });
 
 // row 4
